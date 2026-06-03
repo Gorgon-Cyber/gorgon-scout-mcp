@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-  "name": "io.github.gorgon-cyber/gorgon-scout",
+  "name": "io.github.Gorgon-Cyber/gorgon-scout",
   "description": "Run AI-driven web-app and API security scans (DAST) from Claude or any MCP agent. Windows.",
   "version": "1.0.22",
   "websiteUrl": "https://gorgoncyber.com/scout",
