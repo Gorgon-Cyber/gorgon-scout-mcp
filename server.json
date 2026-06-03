@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.gorgon-cyber/gorgon-scout",
+  "description": "Run AI-driven web-app and API security scans from Claude or any MCP agent. Records the target, runs the scan, streams findings, and produces a report. Windows; requires the Gorgon Scout app.",
+  "version": "1.0.22",
+  "websiteUrl": "https://gorgoncyber.com/scout",
+  "repository": {
+    "url": "https://github.com/Gorgon-Cyber/gorgon-scout-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://storage.googleapis.com/gorgon-scout-downloads/gorgon-scout.mcpb",
+      "version": "1.0.22",
+      "fileSha256": "50ee01c76af7641f4e4bde12ea85e01c4b73041b9fad02bce8ae9fedce3b8e58",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

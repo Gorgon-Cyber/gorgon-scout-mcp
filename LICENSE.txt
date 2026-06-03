@@ -1,0 +1,10 @@
+Copyright (c) 2026 Gorgon Cyber Pty. Ltd. All rights reserved.
+
+Gorgon Scout and the Gorgon Scout MCP connector are proprietary software.
+
+This repository contains only metadata, documentation, and the connector
+manifest used to list Gorgon Scout in Model Context Protocol directories. It
+does not grant any license to the Gorgon Scout software itself, which is
+distributed under the terms presented during installation.
+
+See https://gorgoncyber.com for details.

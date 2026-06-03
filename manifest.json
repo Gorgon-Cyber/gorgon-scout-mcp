@@ -1,0 +1,50 @@
+{
+  "manifest_version": "0.2",
+  "name": "gorgon-scout",
+  "display_name": "Gorgon Scout",
+  "version": "1.0.22",
+  "description": "Run Gorgon Scout web-application penetration-test scans from Claude.",
+  "long_description": "Connects Claude Desktop to a locally installed copy of Gorgon Scout, a Windows web-application penetration-testing tool. Ask Claude in plain language to scan a web app or API you are authorised to test; it manages target profiles, runs the scan, streams progress and findings, and produces a Word report with optional AI analysis. Requires Gorgon Scout to be installed (download from https://gorgoncyber.com/scout-download.html). Every scan still requires you to confirm the in-scope hostname, and your account credentials are never sent to Claude.",
+  "author": {
+    "name": "Gorgon Cyber",
+    "url": "https://gorgoncyber.com/scout"
+  },
+  "homepage": "https://gorgoncyber.com/scout",
+  "documentation": "https://gorgoncyber.com/scout-claude.html",
+  "icon": "icon.png",
+  "server": {
+    "type": "binary",
+    "entry_point": "gorgon-scout-mcp.exe",
+    "mcp_config": {
+      "command": "${__dirname}/gorgon-scout-mcp.exe",
+      "args": []
+    }
+  },
+  "tools": [
+    { "name": "scout_account_status", "description": "Show signed-in user, plan, AI token balance, and entitlements." },
+    { "name": "scout_signin", "description": "Ensure the user is signed in to Gorgon Scout." },
+    { "name": "scout_list_profiles", "description": "List saved scan profiles." },
+    { "name": "scout_show_profile", "description": "Show a profile's hosts, endpoints, and auth state." },
+    { "name": "scout_create_profile", "description": "Create an empty scan profile." },
+    { "name": "scout_delete_profile", "description": "Delete a scan profile." },
+    { "name": "scout_rename_profile", "description": "Rename a scan profile." },
+    { "name": "scout_import_har", "description": "Append HAR entries onto a profile's recording." },
+    { "name": "scout_import_spec", "description": "Attach an OpenAPI/Postman/HAR schema to a profile (API workflow)." },
+    { "name": "scout_set_auth_headers", "description": "Set static auth headers for the API workflow." },
+    { "name": "scout_clear_auth_headers", "description": "Clear a profile's static auth headers." },
+    { "name": "scout_set_server_override", "description": "Override the spec's server URL for a profile." },
+    { "name": "scout_clear_server_override", "description": "Remove a profile's server URL override." },
+    { "name": "scout_record_target", "description": "AI-driven Chromium auto-record of a target URL: crawl discovery plus interactive auth collection into a profile (webapp default)." },
+    { "name": "scout_answer_auth_classify", "description": "Answer a classify-auth-fields event: mark each captured login field reusable or one-time." },
+    { "name": "scout_answer_auth_prompt", "description": "Answer an auth-prompt event: HTTP Basic credentials, magic link, or external-action-complete." },
+    { "name": "scout_cancel_auth_prompt", "description": "Abort a single pending auth step by creating its cancel file." },
+    { "name": "scout_start_scan", "description": "Start a penetration-test scan (returns a scanId for polling)." },
+    { "name": "scout_scan_status", "description": "Poll a running scan/analysis for new progress and findings." },
+    { "name": "scout_cancel_scan", "description": "Cancel a running scan or analysis." },
+    { "name": "scout_start_analysis", "description": "Start AI post-scan analysis on a profile's latest report." },
+    { "name": "scout_shutdown_app", "description": "Cleanly shut down any running elevated Scout app process." }
+  ],
+  "compatibility": {
+    "platforms": ["win32"]
+  }
+}
