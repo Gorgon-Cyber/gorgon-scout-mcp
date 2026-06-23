@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "gorgon-scout",
   "display_name": "Gorgon Scout",
-  "version": "1.0.22",
+  "version": "1.0.36",
   "description": "Run Gorgon Scout web-application penetration-test scans from Claude.",
   "long_description": "Connects Claude Desktop to a locally installed copy of Gorgon Scout, a Windows web-application penetration-testing tool. Ask Claude in plain language to scan a web app or API you are authorised to test; it manages target profiles, runs the scan, streams progress and findings, and produces a Word report with optional AI analysis. Requires Gorgon Scout to be installed (download from https://gorgoncyber.com/scout-download.html). Every scan still requires you to confirm the in-scope hostname, and your account credentials are never sent to Claude.",
   "author": {
